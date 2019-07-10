@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">TED_Talks</string>
+    <string name="str1">
+        Gradle adds the dependency to the compile classpath and packages the dependency to the build output. That is, the dependency is available to other modules only at runtime.
+        \n\n
+        Using this dependency configuration instead of api or compile (deprecated) can result in significant build time improvements because it reduces the number of modules that the build system needs to recompile.
+    </string>
+    <string name="str2">
+        Gradle adds the dependency to the compile classpath and build output. When a module includes an api dependency, it is letting Gradle know that the module wants to transitively export.
+        \n\n
+        This configuration behaves just like compile (which is now deprecated), but you should use it with caution and only with dependencies that you need to transitively export to other upstream consumers.
+    </string>
+    <string name="str3">
+        Gradle adds the dependency to the compile classpath only (that is, it is not added to the build output).
+        \n\n
+        If you use this configuration, then your library module must include a runtime condition to check whether the dependency is available, and then gracefully change its behavior so it can still function if it is not provided.
+    </string>
+    <string name="str4">
+        Gradle adds the dependency to the build output only, for use during runtime. That is, it is not added to the compile classpath. This configuration behaves just like apk (which is now deprecated).
+    </string>
+    <string name="str5">
+        To add a dependency on a library that is an annotation processor, you must add it to the annotation processor classpath using the annotationProcessor configuration.
+        \n\n
+        If Gradle finds annotation processors on the compile classpath, it deactivates compile avoidance, which negatively impacts build time (Gradle 5.0 and higher ignore annotation processors found on the compile classpath).
+    </string>
 </resources>

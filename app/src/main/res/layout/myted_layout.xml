@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="30dp"
+                android:weightSum="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/mg"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="15dp"
+                            android:text="Log in to your TED account"
+                            android:textColor="#000"
+                            android:textFontWeight="900"
+                            android:textSize="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:text="Sync My List, Likes, and History."
+                            android:textSize="15dp"
+                            app:layout_constraintTop_toBottomOf="@id/t1" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorAccent"
+                            android:text="Login"
+                            android:textColor="#fff"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/t2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="40dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:src="@mipmap/b"
+                        android:paddingTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/t3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#000"
+                        android:text="My List"/>
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img1"
+                        app:layout_constraintTop_toBottomOf="@id/t3"
+
+                        android:text="No talks"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:src="@mipmap/bp"
+                        android:paddingTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/t13"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#000"
+                        android:text="Likes"/>
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img2"
+                        app:layout_constraintTop_toBottomOf="@id/t13"
+                        android:text="No talks"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:src="@mipmap/b"
+                        android:paddingTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/t23"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#000"
+                        android:text="Downloads"/>
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img3"
+                        app:layout_constraintTop_toBottomOf="@id/t23"
+
+                        android:text="No talks"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="20dp">
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:src="@mipmap/bp"
+                        android:paddingTop="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/t33"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#000"
+                        android:text="History"/>
+                    <TextView
+                        android:paddingLeft="30dp"
+                        android:id="@+id/t34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/img4"
+                        app:layout_constraintTop_toBottomOf="@id/t33"
+
+                        android:text="No talks"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="50dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Helping TED Mobilize Idea"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="6dp"
+                        android:textAlignment="center"
+                        android:paddingLeft="6dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textFontWeight="900"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
