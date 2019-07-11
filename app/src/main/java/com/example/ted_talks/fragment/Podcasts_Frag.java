@@ -15,7 +15,7 @@ public class Podcasts_Frag extends Fragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.discover_layout, container, false);
+        View v = inflater.inflate(R.layout.podcasts_layout, container, false);
         return v;
     }
 }
